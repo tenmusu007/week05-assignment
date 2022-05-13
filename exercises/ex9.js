@@ -7,10 +7,19 @@ We will receive a normal string of words separated with spaces as the input. Our
 Instruction
 Create a function named camelCase that will convert a string to camel case, and return the result.
 */
-
-Input
 const camelCase = function(input) {
-  // Your code here
+  let str =""
+  for(let i = 0; i < input.length; i++){
+    // console.log(input[i])
+    if(input[i] === " "){
+      // str += input[i]
+    }else if(input[i - 1] === " "){
+      str += input[i].toUpperCase()
+    }else{
+      str += input[i]
+    }
+  }
+  console.log(str)
 };
 
 console.log(camelCase("this is a string")); // thisIsAString

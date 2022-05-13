@@ -19,9 +19,61 @@ Note
 This one is a doozy! We might want to start by creating a helper function called ingredientCheck() that will take in one bakery at a time, along with the recipes.ingredients array to check if the given bakery possesses any of the ingredients from that recipe.
 
 */
+// const test = bakeryA.map(function(value){
+//     if(value ==="coconut"){
+//         return value
 
+//     }
+// });
+// console.log(test)
+let answer
+let suggestA =[];
+let suggestB = [];
 const chooseRecipe = function(bakeryA, bakeryB, recipes) {
-  // Code here!
+
+    for(let i = 0; i < recipes.length; i++){
+        for(let y = 0; y < bakeryA.length; y++){
+            for(let z = 0; z < 2; z++){
+                if(recipes[i].ingredients[z] === bakeryA[y]){
+                    // console.log("A :" + bakeryA[y])
+                    suggestA.push(bakeryA[y]) 
+                    
+                }
+            }
+        }
+    }
+    for(let i = 0; i < recipes.length; i++){
+        for(let y = 0; y < bakeryB.length; y++){
+            for(let z = 0; z < 2; z++){
+                if(recipes[i].ingredients[z] === bakeryB[y]){
+                    // console.log("B :" + bakeryB[y])
+                    suggestB.push(bakeryB[y])
+                }
+            }
+        }
+    }
+
+    return check()
+}
+function check(){
+    for(let i = 0; i < suggestA.length; i++){
+        for(let b = 0; b < suggestB.length; b++){
+            for(let y = 0; y < 3; y++){
+                if(suggestA[i] === recipes[y].ingredients[0] ||suggestA[i] === recipes[y].ingredients[1] ){
+                    if(suggestB[b] === recipes[y].ingredients[0] || suggestB[b] === recipes[y].ingredients[1]){
+                        // console.log("A : YES , B : Yes")
+                        answer = recipes[y].name
+                        return answer
+                    }else{
+                        // console.log("A : YES , B : no")
+                    }
+                }else{
+                    // console.log("A : No")
+                }
+            }
+            // console.log("________")
+        }
+    }
 }
 
 let bakeryA = ['saffron', 'eggs', 'tomato paste', 'coconut', 'custard'];

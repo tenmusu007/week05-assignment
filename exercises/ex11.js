@@ -28,25 +28,42 @@ Implement the functions one by one. The example inputs and outputs below will he
 const PI = 3.14159 ;
 
 const sphereVolume = function (radius) {
-  // Code here!
+  let total = 0;
+  total = 4/3* PI *radius*radius*radius
+  return Math.floor(total)
 }
 
 console.log(4186 < sphereVolume(10) && sphereVolume(10) < 4189); //true
 
 const coneVolume = function (radius, height) {
-  // And here!
+  let total = 0;
+  total = PI*radius*radius*height/3
+  return total
 }
 
 console.log(45 < coneVolume(3, 5) && coneVolume(3, 5) < 49); //true
 
 const prismVolume = function (height, width, depth) {
-  // Probably here too!
+  let total = 0;
+  total = depth * width*height
+  // console.log(total)
+  return total
 }
 
 console.log(prismVolume(3, 4, 5) === 60); //true
 
 const totalVolume = function (solids) {
-  // Code here? Yup!
+  // let lsphere = 0;
+  // lsphere = largeSphere.radius * largeSphere.radius * largeSphere.radius
+  // let ssphere = 0;
+  // ssphere = smallSphere.radius *smallSphere.radius *smallSphere.radius
+let large = sphereVolume(largeSphere.radius)
+let small = sphereVolume(smallSphere.radius)
+let Cone = coneVolume(cone.radius, cone.height)
+// console.log(large,small)
+let sum = large + small + Cone
+return sum
+
 }
 
 const largeSphere = {

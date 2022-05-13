@@ -9,7 +9,20 @@ Create a function named repeatNumbers that will return a string with each of the
 */
 
 const repeatNumbers = function(data) {
-  // Put your solution here
+  let sum = "";
+  let first =""
+  // console.log(data.length)
+  // console.log(data)
+  for(let i = 0; i < data.length; i++){
+      first = data[i][1]
+      for(let z = 0; z < first; z++){
+        sum +=data[i][0]
+      }
+      if( i < data.length -1){
+        sum += ","
+      }
+    }
+    return sum
 };
 
 console.log(repeatNumbers([[1, 10]])); // 1111111111

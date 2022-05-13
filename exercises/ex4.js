@@ -10,8 +10,20 @@ Create a function named instructorWithLongestName that will receive an array of 
 */
 
 const instructorWithLongestName = function(instructors) {
-    // Put your solution here
-  };
+  // console.log(instructors)
+  let sum = 0;
+  let obj
+  for(let i = 0; i < instructors.length; i++){
+
+    if(instructors[i].name.length > sum){
+      sum = instructors[i].name.length
+      obj = instructors[i]
+    }
+    
+
+        }
+        console.log(obj)
+};
   
   console.log(instructorWithLongestName([
     {name: "Samuel", course: "Mobile"},

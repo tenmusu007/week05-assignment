@@ -19,7 +19,22 @@ Use some sort of looping. Do Not use String.prototype.replace
 */
 
 const urlEncode = function(text) {
-    // Put your solution here
+  let alet = "%20"
+  let sum  = ""
+  for(let i = 0; i < text.length; i++){
+    if(text[i] === " " ){
+      if(i === 0 || i === text.length -1){
+        sum = sum
+      }else{
+        sum = sum + alet
+      }
+    }else{
+      // console.log(text[i])
+      sum = sum + text[i]
+    }
+  }console.log(sum)
+
+
   };
   
   console.log(urlEncode("cornerstone college")); //cornerstone%20college

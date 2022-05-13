@@ -9,7 +9,23 @@ Not sure where to get started? It might be useful to start by creating a variabl
 */
 
 const checkAir = function (samples, threshold) {
-  // Code here!
+  let pocount = 0;
+  let cleancount = 0;
+  for(let i in samples){
+    if(samples[i] === "dirty"){
+      pocount ++;
+    }else{
+      cleancount ++
+    }
+  }
+
+  let sum = pocount + cleancount
+  // console.log(sum)
+  if(pocount / sum > threshold){
+    console.log("Polluted")
+  }else{
+    console.log("Clean")
+  }
 };
 
 console.log(checkAir(

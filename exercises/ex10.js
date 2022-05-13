@@ -7,9 +7,31 @@ Instruction
 Create a function named multiplicationTable that receives a number maxValue as input and creates a square multiplication table where maxValue is the largest value in the table.
 */
 
-Input
-const multiplicationTable = function(maxValue) {
-  // Your code here
+const multiplicationTable = function (maxValue) {
+  let sum = "";
+  let sum2 = "";
+
+  // for (let i = 1; i <(maxValue * maxValue) + 1; i = i + maxValue){
+  //   sum += i + " ";
+  // }
+  // for (let i = 1; i <(maxValue * maxValue) + 1; i = i + maxValue){
+  //   sum += i + " ";
+  // }
+  for(let i = 1; i < maxValue + 1; i++){
+    for(let y = 1; y < maxValue + 1; y++){
+      sum += i*y + " "
+      if(y === maxValue){
+        sum += "\n"
+      }
+    }
+  }
+  return sum
+  // for(let y = 1; y < maxValue + 1; y = y + 2){
+  //   sum2 += y + " "; 
+  // }
+
+  // console.log(sum);
+  // console.log(sum2);
 };
 
 console.log(multiplicationTable(1));
@@ -20,7 +42,7 @@ console.log(multiplicationTable(5));
 // 2 4 6 8 10
 // 3 6 9 12 15
 // 4 8 12 16 20
-// 5 10 15 20 25 
+// 5 10 15 20 25
 
 console.log(multiplicationTable(10));
 // 1 2 3 4 5 6 7 8 9 10
