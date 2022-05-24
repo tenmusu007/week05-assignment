@@ -9,14 +9,7 @@ Create a function named multiplicationTable that receives a number maxValue as i
 
 const multiplicationTable = function (maxValue) {
   let sum = "";
-  let sum2 = "";
 
-  // for (let i = 1; i <(maxValue * maxValue) + 1; i = i + maxValue){
-  //   sum += i + " ";
-  // }
-  // for (let i = 1; i <(maxValue * maxValue) + 1; i = i + maxValue){
-  //   sum += i + " ";
-  // }
   for(let i = 1; i < maxValue + 1; i++){
     for(let y = 1; y < maxValue + 1; y++){
       sum += i*y + " "
@@ -26,12 +19,6 @@ const multiplicationTable = function (maxValue) {
     }
   }
   return sum
-  // for(let y = 1; y < maxValue + 1; y = y + 2){
-  //   sum2 += y + " "; 
-  // }
-
-  // console.log(sum);
-  // console.log(sum2);
 };
 
 console.log(multiplicationTable(1));
